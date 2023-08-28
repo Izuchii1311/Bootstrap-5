@@ -21,6 +21,104 @@
     background-color: rgb(255, 237, 237);
 }
 
+/* My-Keyboard Section */
+.keyboard-box {
+    background-color: white;
+    border-radius: 10px;
+    height: 500px;
+    position: relative;
+    /* overflow: hidden; */
+
+    /* 3D pada element di dalam kotak */
+    transform-style: preserve-3d;
+}
+
+.keyboard-box::before {
+    content: "My";
+    position: absolute;
+    color: pink;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    /* left: -100px; */
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.keyboard-box:hover::before {
+    opacity: 0.3;
+}
+
+.keyboard-box::after {
+    content: "Keyboard";
+    position: absolute;
+    color: pink;
+    font-size: 4em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.keyboard-box:hover::after {
+    opacity: 0.3;
+}
+
+.keyboard-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: red;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: 0.5s;
+
+    /* 3D */
+    /* translate3d (sumbu X, sumbu Y, sumbu Z) */
+    transform: translate3d(0,0,50px);
+}
+
+.keyboard-box:hover .keyboard-name {
+    top: 30px;
+    opacity: 1;
+}
+
+.btn-detail {
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 55px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.keyboard-box:hover .btn-detail {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.keyboard-img {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate3d(-50%, -52%, 50px);
+    max-width: 350px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.keyboard-box:hover .keyboard-img{
+    transform: translate3d(-50%, -25%, 50px) rotate(5deg) scale(1.2);
+}
+
 /* Gallery */
 .img-gallery {
     width: 100%;
