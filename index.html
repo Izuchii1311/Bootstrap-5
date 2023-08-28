@@ -1,0 +1,268 @@
+<!-- Menggunakan Bootstrap, libraty AOS, dan platform GSAP -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio | Learn Bootstrap 5</title>
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="home">
+    <!-- Navbar -->
+    <!-- navbar-dark = menandakan navbar warna gelap maka textnya akan berwarna terang -->
+    <!-- shadow-sm = memberikan shadow pada navbar. -->
+    <!-- fixed-top = agar navbar fixed ketika di scroll -->
+    <nav class="navbar navbar-expand-lg text-white navbar-dark shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Izuchii Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+        <img src="/img/2.png" alt="" width="200" class="rounded-circle img-hero img-thumbnail">
+        <h1 class="display-4">Izuchii Website</h1>
+        <!-- <p class="lead">Web Developer, Anime, Gamer</p> -->
+        <p class="lead"></p>
+        <!-- White Waves -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L60,122.7C120,149,240,203,360,202.7C480,203,600,149,720,138.7C840,128,960,160,1080,165.3C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </section>
+    <!-- End Jumbotron -->
+
+    <!-- About Me -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm">
+                    <h2>About Me</h2>
+                </div>
+            </div>
+            <div class="row text-center justify-content-center fs-5 mt-5">
+                <div class="col-sm-4" data-aos="fade-right" data-aos-duration="1000">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum corrupti rerum neque, ex nisi in, dolorum esse quod, minus suscipit voluptatum perferendis. Corporis, accusamus qui!</p>
+                </div>
+                <div class="col-sm-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam repellendus officia corporis atque dicta voluptas quo reprehenderit vero. Ullam, deleniti non corporis hic sed dolorum! Iusto pariatur quam voluptatum.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Pink Waves -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffeded" fill-opacity="1" d="M0,96L48,101.3C96,107,192,117,288,122.7C384,128,480,128,576,138.7C672,149,768,171,864,192C960,213,1056,235,1152,208C1248,181,1344,107,1392,69.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- End About Me -->
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-sm">
+                    <h2>My Projects</h2>
+                </div>
+            </div>
+            <div class="row justify-content-evenly">
+                <div class="col-sm-4 mb-3">
+                    <div class="card" data-aos="flip-left">
+                        <img src="/img/1.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <div class="card" data-aos="flip-left" data-aos-delay="100">
+                        <img src="/img/3.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <div class="card" data-aos="flip-left" data-aos-delay="200">
+                        <img src="/img/4.png" class="card-img-top" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <div class="card" data-aos="flip-left" data-aos-delay="300">
+                        <img src="/img/6.png" class="card-img-top" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <div class="card" data-aos="flip-left" data-aos-delay="400">
+                        <img src="/img/7.png" class="card-img-top" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- White Waves -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,32L30,37.3C60,43,120,53,180,58.7C240,64,300,64,360,80C420,96,480,128,540,138.7C600,149,660,139,720,144C780,149,840,171,900,176C960,181,1020,171,1080,165.3C1140,160,1200,160,1260,181.3C1320,203,1380,245,1410,266.7L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    </section>
+    <!-- End Projects -->
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-sm">
+                    <h2>Gallery</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+                <div class="col-sm-3 mb-3">
+                    <a href=""><img src="/img/5.png" alt="" class="img-fluid img-gallery"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Gallery -->
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col">
+                    <h2>Contact Me</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comment</label>
+                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFC0CB" fill-opacity="1" d="M0,96L30,112C60,128,120,160,180,186.7C240,213,300,235,360,245.3C420,256,480,256,540,250.7C600,245,660,235,720,213.3C780,192,840,160,900,176C960,192,1020,256,1080,272C1140,288,1200,256,1260,229.3C1320,203,1380,181,1410,170.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Footer -->
+    <footer class="footer text-white text-center pb-4" id="footer">
+        <p>Created with <i class="bi bi-arrow-through-heart-fill text-danger"></i> by <a href="https://instagram.com/izuchii1311" class="text-decoration-none text-white fw-bold">Izuchii Website</a></p>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap JS -->
+    <script src="/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const imgGallery = document.querySelectorAll('.img-gallery');
+
+        imgGallery.forEach((img, i) => {
+            img.dataset.aos = 'fade-down';
+            img.dataset.aosDelay = i * 100;
+            img.dataset.aosDuration = 1000;
+        });
+
+        AOS.init({
+            once: true,
+            duration: 2000
+        });
+    </script>
+
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- GSAP Text Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <script>
+        // Text Animation Plugin
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.lead', {
+            duration: 2,
+            delay: 1.5,
+            text: "Web Developer, Anime, Gamer",
+        });
+
+        gsap.from('.img-hero', {
+            // duration: 2,
+            // y: -100,
+            // opacity: 0,
+            // ease: 'bounce',
+
+            duration: 1,
+            rotateX: 360,
+            opacity: 0,
+        });
+
+        gsap.from('.navbar', {
+            duration: 1.5,
+            y: '-100%',
+            opacity: 0,
+            ease: 'bounce'
+        });
+
+        gsap.from('.display-4', {
+            duration: 1,
+            x: -50,
+            opacity: 0,
+            delay: 0.5,
+            ease: 'back'
+        });
+    </script>
+
+</body>
+</html>
