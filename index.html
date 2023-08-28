@@ -1,4 +1,6 @@
 <!-- Menggunakan Bootstrap, libraty AOS, dan platform GSAP -->
+<!-- Menggunakan Tilt.js -->
+<!-- Menjalankan form ke dalam google sheets https://github.com/jamiewilson/form-to-google-sheets -->
 
 <!doctype html>
 <html lang="en">
@@ -209,20 +211,30 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-sm-8">
-                    <form>
+                    <!-- Alert -->
+                    <div class="alert alert-success alert-dismissible fade show d-none alert-notification" role="alert">
+                        <strong>Terima Kasih,</strong> Pesan anda sudah kami terima.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form name="Izuchii-contact-form">
                         <div class="mb-3">
                             <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name">
+                            <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="email">
                         </div>
                         <div class="mb-3">
                             <label for="comment" class="form-label">Comment</label>
-                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                            <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-danger btn-kirim">Submit</button>
+                        <!-- Menambahkan Loading -->
+                        <button class="btn btn-danger btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            <span role="status">Loading...</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -307,5 +319,37 @@
         });
     </script>
 
+    <!-- form to spread sheets -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxTSgiaxVJC1EhKQD6F_bGFuFA0KyVte9Yw9dtoT7BT6dIf7df1a01-ic0E47qLLk2_Gg/exec'
+        const form = document.forms['Izuchii-contact-form']
+
+        // Button & Alert
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const alertNotification = document.querySelector('.alert-notification');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            // Ketika tombol submit di klik
+            // tampilkan tombol loading gantikan tombol kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // hilangkan tombol loading kembalikan tombol kirim
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    // tampilkan alert
+                    alertNotification.classList.toggle('d-none');
+
+                    // Reset Form
+                    form.reset();
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 </html>
